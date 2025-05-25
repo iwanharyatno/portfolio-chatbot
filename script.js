@@ -35,7 +35,7 @@ function respondTo(text) {
 
     const typingIndicator = showTypingIndicator();
 
-    fetch("https://eowzndi5vnprl7p.m.pipedream.net ", {
+    fetch("https://iwanbot.onrender.com/chat", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
