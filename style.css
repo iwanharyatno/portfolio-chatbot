@@ -82,6 +82,11 @@ body {
     border-radius: 6px;
 }
 
+.message p.bubble-sender {
+    color: #00ddb3;
+    text-decoration: underline;
+}
+
 button {
     padding: 12px 16px;
     background-color: #00ffcc;

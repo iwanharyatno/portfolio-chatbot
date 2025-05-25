@@ -21,9 +21,17 @@ function appendMessage(sender, message, className) {
     const msgBox = document.createElement("div");
     msgBox.classList.add('message-container', className);
     const bubbleDiv = document.createElement("div");
+    const from = document.createElement('p');
+    from.classList.add('bubble-sender');
+    from.innerHTML = `<strong>${sender}</strong>`;
+    const reply = document.createElement('div');
     bubbleDiv.className = `message`;
     const htmlContent = marked.parse(message);
-    bubbleDiv.innerHTML = htmlContent;
+    reply.innerHTML = htmlContent;
+
+    bubbleDiv.appendChild(from);
+    bubbleDiv.appendChild(reply);
+
     msgBox.appendChild(bubbleDiv);
     chatBox.appendChild(msgBox);
     chatBox.scrollTop = chatBox.scrollHeight;
